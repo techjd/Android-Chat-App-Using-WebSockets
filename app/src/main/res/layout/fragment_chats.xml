@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.ChatsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ourInfo"
+        app:cardElevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="30dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="UserName" />
+
+            <TextView
+                android:textSize="23dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/socketId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="SocketId" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/ourInfo"
+        android:id="@+id/availableUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available Users" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        tools:listitem="@layout/item_chat_list"
+        android:layout_below="@id/availableUsers"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/chatsFragment">
+
+    <fragment
+        android:id="@+id/chatsFragment"
+        android:name="com.techjd.chatapp.ui.fragment.ChatsFragment"
+        android:label="fragment_chats"
+        tools:layout="@layout/fragment_chats">
+        <action
+            android:id="@+id/action_chatsFragment_to_chattingFragment"
+            app:destination="@id/chattingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onlineUsersFragment"
+        android:name="com.techjd.chatapp.ui.fragment.OnlineUsersFragment"
+        android:label="fragment_online_users"
+        tools:layout="@layout/fragment_online_users" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.techjd.chatapp.ui.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/chattingFragment"
+        android:name="com.techjd.chatapp.ui.fragment.ChattingFragment"
+        android:label="ChattingFragment">
+
+        <argument
+            android:name="socketId"
+            app:argType="string" />
+        <argument
+            android:name="username"
+            app:argType="string" />
+        <argument
+            android:name="to"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="email"
+            app:argType="string" />
+    </fragment>
+</navigation>

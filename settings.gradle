@@ -1,0 +1,3 @@
+include ':DisplayInitials'
+include ':app'
+rootProject.name = "Chat App"
